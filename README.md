@@ -16,7 +16,9 @@ script for getting sites' metrics
 - топ заголовков самых читаемых материалов
 
 Есть фильтр по региону
+
 Если счётчиков несколько, издания ранжируются по количеству визитов.
 
 После применения [оформления](https://docs.google.com/spreadsheets/d/1nZTfGuIwfiw680Rh5-I8LZ-aeApDZdvbt7wSdHzSxYE/edit?usp=sharing), получается примерно такая таблица:
+
 ![My Image](table.jpg)
