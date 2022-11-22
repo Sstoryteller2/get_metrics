@@ -18,5 +18,5 @@ script for getting sites' metrics
 Есть фильтр по региону
 Если счётчиков несколько, издания ранжируются по количеству визитов.
 
-После применения оформления, получается примерно такая таблица:
+После применения [оформления](https://docs.google.com/spreadsheets/d/1nZTfGuIwfiw680Rh5-I8LZ-aeApDZdvbt7wSdHzSxYE/edit?usp=sharing), получается примерно такая таблица:
 ![My Image](table.jpg)
