@@ -46,7 +46,7 @@ def get_trafic_data(counter_n, date1, date2):
         "dimensions": "ym:s:<attribution>TrafficSource",
         "lang": "ru",
         "group": config.group,
-        "filters": "EXISTS(ym:s:regionAreaName == 'Республика Татарстан')",
+     #   "filters": "EXISTS(ym:s:regionAreaName == 'Название региона')",
         # 'limit':150
     }
     resp = requests.get(api_url, headers=config.header_params, params=payload)
@@ -64,7 +64,7 @@ def get_headlines_data(counter_n, date1, date2, limit):
         "accuracy": "full",
         "dimensions": "ym:pv:title",
         "lang": "ru",
-        "filters": "EXISTS(ym:s:regionAreaName == 'Республика Татарстан')",
+     #   "filters": "EXISTS(ym:s:regionAreaName == 'Название региона')",
         "limit": limit,
     }
     response_headlines = requests.get(
@@ -76,8 +76,7 @@ def get_headlines_data(counter_n, date1, date2, limit):
 def hl_arr(headlines):
     A = np.zeros((0, 2))
     hl_lst = list()
-    for item in headlines["data"]:
-        # print(item['dimensions'][0]['name'], item['metrics'][0])
+    for item in headlines["data"]:        
         hl_lst = [item["dimensions"][0]["name"], f"{item['metrics'][0]/1000:,.1f}"]
         A = np.vstack([A, hl_lst])
     return A
